@@ -1,0 +1,77 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #F5F3EE;
+}
+
+/* Letterbox container: fills the window, centers the canvas,
+   beige bands (body background) show on the leftover sides. */
+#unity-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #F5F3EE;
+}
+
+/* Canvas size is set in px by resizeCanvas() in index.html to keep 16:9. */
+#unity-canvas {
+  background: #F5F3EE;
+  display: block;
+}
+
+#unity-loading-bar {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  text-align: center;
+}
+
+#unity-logo {
+  width: 154px;
+  height: 38px;
+  margin: 0 auto 10px;
+  font-family: arial, sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+  color: #1a3fff;
+  line-height: 38px;
+}
+
+#unity-logo::after {
+  content: "FLOW";
+}
+
+#unity-progress-bar-empty {
+  width: 200px;
+  height: 10px;
+  margin: 0 auto;
+  border-radius: 5px;
+  background: #d8d4cc;
+  overflow: hidden;
+}
+
+#unity-progress-bar-full {
+  width: 0%;
+  height: 10px;
+  background: #1a3fff;
+}
+
+#unity-warning {
+  position: absolute;
+  left: 50%;
+  top: 5%;
+  transform: translate(-50%);
+  background: white;
+  padding: 10px;
+  display: none;
+}
