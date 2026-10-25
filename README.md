@@ -4,6 +4,13 @@ A web tool for **visitor-flow simulation** on a museum floor plan. Load a plan, 
 
 Open the app: [malkovajuly97-source.github.io/flow](https://malkovajuly97-source.github.io/flow/)
 
+## Quick test
+
+1. Open the [app](https://malkovajuly97-source.github.io/flow/).
+2. Download the sample plan: [`examples/Museum.gltf`](examples/Museum.gltf) (self-contained, ~5 MB).
+3. Click **Load plan** and select that file.
+4. Set typology to **Museum**, leave the default agent count, click **Start simulation**, then **Run analysis**.
+
 ![Simulation setup](docs/simulation.png)
 
 ![Analysis maps](docs/analysis.png)
@@ -37,6 +44,8 @@ Model `Floor` and `Walls` as separate solid volumes. Place `Area` as a plane jus
 
 Calibrated on the **BIRD** dataset (Nancy Museum of Fine Arts: 51 visitors, 134 artworks, 2,221 tracks).
 
+Source: [gitlab.univ-lorraine.fr/worm2u/bird-dataset](https://gitlab.univ-lorraine.fr/worm2u/bird-dataset) · [mbanv2.loria.fr](https://mbanv2.loria.fr/) · paper [doi.org/10.1145/3708319.3733686](https://doi.org/10.1145/3708319.3733686)
+
 - **Route choice** — the next target is picked from nearby, mostly forward and visible candidates (in the source data ~89% were visible, ~67% ahead, ~93% among the five nearest forward options).
 - **Profiles** — four visitor types: Active Explorer, Fast, Slow, Researcher.
 - **Maps** — room popularity, transition count, bottlenecks, dead zones, entrance catchment. Dead zones are cells that are both rarely walked and poorly visible.
@@ -50,3 +59,11 @@ Behaviour-informed pedestrian simulation for museum spaces, built to support arc
 Author: **Iuliia Malkova**, IAAC, 2026.
 
 Questions: [linkedin.com/in/yulia-malkova](https://www.linkedin.com/in/yulia-malkova/)
+
+## License
+
+This project is [CC BY-NC-SA 4.0](LICENSE): share and adapt for non-commercial use, with credit and the same license.
+
+BIRD itself is also CC BY-NC-SA 4.0. If you use the dataset, please cite:
+
+Alexanne Worm, Florian Marchal, and Sylvain Castagnos. 2025. BIRD: A Museum Open Dataset Combining Behavior Patterns and Identity Types to Better Model Visitors’ Experience. *UMAP Adjunct ’25*. [https://doi.org/10.1145/3708319.3733686](https://doi.org/10.1145/3708319.3733686)
